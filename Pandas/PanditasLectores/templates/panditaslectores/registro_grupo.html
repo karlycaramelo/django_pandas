@@ -1,0 +1,15 @@
+{% block body %}
+<style>
+    h1 {
+        color: blue;
+    }
+</style>
+<h1> Test Reading with Pandas </h1>
+<form action="/panditaslectores/registro_grupo/" method="post" enctype="multipart/form-data"> <!--form file management-->
+    {% csrf_token %}
+    {{form.as_p}}
+    <div>
+    <button style="margin:5px" class="btn-info" type="submit">Save</button>    
+    </div>
+</form>
+{% endblock %}
